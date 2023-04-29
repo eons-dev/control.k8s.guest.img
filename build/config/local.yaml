@@ -1,0 +1,11 @@
+clear_build_path: true
+build_in: img
+next:
+  - build: docker
+    build_in: docker
+    config:
+      base_image: eons/worker.k8s.guest.img:latest
+      image_name: eons/control.k8s.guest.img
+      image_os: alpine
+      tags:
+        - latest
